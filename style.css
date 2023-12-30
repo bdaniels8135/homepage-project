@@ -75,7 +75,7 @@ main {
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .project-container {
@@ -159,13 +159,12 @@ footer nav {
   }
 }
 
-@media (min-width: 651px) and (max-width: 800px) {
+@media (min-width: 651px) and (max-width: 1000px) {
 
   .headshot-container {
     max-width: 300px;
     float: left;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+    margin-right: 1rem;
   }
 
   .headshot-container figcaption {
@@ -189,7 +188,7 @@ footer nav {
   }
 
   .about-me p {
-    margin: 0 2rem 1rem 5rem;
+    margin: 0 2.5rem 1rem 5rem;
   }
 
   .about-me-card {
@@ -209,8 +208,10 @@ footer nav {
   }  
 } 
 
-@media (min-width: 801px) {
-
+@media (min-width: 1000px) {
+  p {
+    font-size: 1.1rem;
+  }
 
   h1 {
     font-size: 2rem;
@@ -223,8 +224,7 @@ footer nav {
   .headshot-container {
     max-width: 300px;
     float: left;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+    margin-right: 1rem;
     position: relative;
   }
 
@@ -249,7 +249,7 @@ footer nav {
   }
 
   .about-me p {
-    margin: 1rem 2rem 0 0;
+    margin: 1rem 3rem 0 0;
   }
 
   .about-me-card {
@@ -264,12 +264,6 @@ footer nav {
 
   main {
     padding: 4rem;
-  }
-
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
   }
 
   footer {
