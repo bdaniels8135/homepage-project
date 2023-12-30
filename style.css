@@ -2,22 +2,31 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
   font-size: 1rem;
 }
 
+:root{
+  --light-text-color: rgb(200, 200, 200);
+  --background-color: rgb(0, 115, 200);
+}
+
 body {
-  padding: 1rem;
   max-width: 1000px;
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 figcaption {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 650;
 }
 
 img {
-  width: 100%;
+ max-width: 100%;
 }
 
 .link-icon {
@@ -31,4 +40,110 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.triangle {
+  position: absolute;
+  background-color: var(--background-color);
+  bottom: 70%;
+  left: -50%;
+  transform-origin: bottom center;
+  transform: rotate(-30deg);
+  height: 300%;
+  width: 300%;
+  z-index: -1;
+  box-shadow: 0 .25rem 1rem .5rem grey;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-nav {
+  justify-self: right;
+}
+
+.project-desc {
+  grid-column: span 2;
+}
+
+
+
+footer {
+  display: flex;
+  background-color: var(--background-color);
+  color: var(--light-text-color);
+  padding: 1rem;
+}
+
+footer svg {
+  fill: var(--light-text-color);
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem 3rem 1rem;
+}
+
+footer nav {
+  align-self: center;
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 450px) {
+  footer {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  figure {
+    max-width: 80%;
+    align-self: center;
+    position: relative;
+  }
+
+  figcaption {
+    position: absolute;
+    padding: 1rem;
+    bottom: 0;
+    color: var(--light-text-color);
+  }
 }
